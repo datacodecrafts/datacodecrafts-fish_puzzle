@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox/CSS Grid Puzzle Assignment</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #0e3b4d;
+      color: #eef6f8;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "info"
+        "puzzle"
+        "date";
+      gap: 20px;
+      max-width: 660px;
+      width: 100%;
+    }
+
+    .info-section {
+      grid-area: info;
+      text-align: center;
+    }
+
+    .info-section h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #ffd76e;
+    }
+
+    .puzzle-name {
+      margin-top: 4px;
+      font-style: italic;
+      color: #b9e3ef;
+    }
+
+    .puzzle-section {
+      grid-area: puzzle;
+      display: flex;
+      justify-content: center;
+    }
+
+    .puzzle-frame {
+      border: 6px solid #ffd76e;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .flex-puzzle {
+      display: flex;
+      flex-wrap: wrap;
+      width: 600px;
+    }
+
+    .flex-puzzle img {
+      display: block;
+      width: 200px;
+      height: 133px;
+    }
+
+    .flex-puzzle img.hidden-piece {
+      display: none;
+    }
+
+    .date-section {
+      grid-area: date;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #b9e3ef;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-grid">
+
+    <header class="info-section">
+      <h1>Efaf</h1>
+      <p class="puzzle-name">Puzzle: Goldfish</p>
+    </header>
+
+    <section class="puzzle-section">
+      <div class="puzzle-frame">
+        <div class="flex-puzzle">
+          <img src="images/piece4.jpeg" alt="puzzle piece">
+          <img src="images/piece1.jpeg" alt="puzzle piece">
+          <img src="images/piece7.jpeg" alt="puzzle piece">
+          <img src="images/piece9.jpeg" alt="puzzle piece">
+          <img src="images/piece2.jpeg" alt="puzzle piece">
+          <img src="images/piece3.jpeg" alt="puzzle piece">
+          <img src="images/piece6.jpeg" alt="puzzle piece">
+          <img src="images/piece8.jpeg" alt="puzzle piece">
+          <img src="images/piece5.jpeg" alt="puzzle piece">
+          <img src="images/wrongpiece.jpeg" alt="extra piece" class="hidden-piece">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
